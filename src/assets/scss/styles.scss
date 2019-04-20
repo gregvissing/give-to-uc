@@ -26,7 +26,10 @@ div#app-container {
     background-size: cover;
 }
 
-* {
+p,
+h1,
+h2,
+h3 {
     color: $white;
 }
 
@@ -41,6 +44,14 @@ button {
 
 h2 {
     font-family: 'Bree Serif';
+}
+
+button {
+
+    &:focus,
+    &:hover {
+        text-decoration: none;
+    }
 }
 
 .btn-success {

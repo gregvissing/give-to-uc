@@ -57,7 +57,7 @@ input {
 }
 
 .internal {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.75);
     text-align: left;
     padding: 1em;
     hr {

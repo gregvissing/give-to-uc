@@ -63,6 +63,24 @@ export default {
         return {
             showSearch: false
         };
+    },
+    method: {
+        handleScroll() {
+            this.scrolled = window.scrollY > 0;
+            if (window.scrollY > 100) {
+                $("nav").addClass("reduced");
+                $(".scrollToTop").fadeIn();
+            } else {
+                $("nav").removeClass("reduced");
+                $(".scrollToTop").fadeOut();
+            }
+        }
+    },
+    created: function() {
+        window.addEventListener("scroll", this.handleScroll);
+    },
+    destroyed() {
+        window.removeEventListener("scroll", this.handleScroll);
     }
 };
 </script>
@@ -101,14 +119,24 @@ nav {
                 color: $white;
                 padding: 1rem 0.75rem;
                 text-transform: uppercase;
+                position: relative;
                 @include transition(all 0.4s ease);
 
                 &:hover,
                 &.active {
                     /* background-color: $white !important; */
                     color: $red !important;
-                    border-bottom: 3px solid $red;
                     box-sizing: border-box;
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        height: 3px;
+                        width: 100%;
+                        background: $red;
+                    }
                     svg path {
                         fill: $black !important;
                     }
@@ -124,6 +152,21 @@ nav {
             }
         }
     }
+    &.reduced {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    /* .nav-container .brand img {
+        height: 60px;
+    }
+
+    .navigation.reduced .nav-container .brand {
+        line-height: 60px;
+    }
+
+    .navigation.reduced .nav-container {
+        height: 60px;
+    } */
 }
 #app .fade-enter-active,
 #app .fade-leave-active {

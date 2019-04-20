@@ -7,7 +7,7 @@
                 v-for="(area, index) in areas"
                 :key="index"
                 :item="area.name"
-                @click="changeSelectVal(key)"
+                @click="changeSelectVal(area.name)"
             >
                 <input type="radio" :value="area.name" name="area-filter" v-model="selected">
                 {{ area.name }}
@@ -21,46 +21,9 @@
         <p>UC and UC Health need your private support to continue growing and meeting the needs of students, faculty, researchers, doctors, patients and society. Explore our funding opportunities to determine the best match for your charitable gift.</p>
 
         <div class="container">
-            <!-- <vue-tabs>
-                <vue-tab
-                    :label="area.name"
-                    :active="true"
-                    v-for="(area, index) in areas"
-                    :key="index"
-                >
-                    <div class="letter-text-container" id="peterText"></div>
-                </vue-tab>
-            </vue-tabs>-->
-
-            <!-- <div class="row">
-                <b-tabs content-class="mt-0">
-                    <b-tab :title="area.name" v-for="(area, index) in areas" :key="index">
-                        <h3>{{ area.name }}</h3>
-                        <p>Description: {{ area.description }}</p>
-                        <div v-for="(subarea, index) in area.subareas" :key="index">
-                            <label>{{ subarea.name }}</label>
-                            <p>{{ subarea.description }}</p>
-                        </div>
-                    </b-tab>
-                </b-tabs>
-            </div>-->
-            <!-- <div class="row">AreaIndex: {{ areaIndex }}</div> -->
-            <!-- <div class="row areas"> -->
-            <!-- <div class="form-group">
-                    <RadioGroup :areas="areas" :selected.sync="area" v-model="area"/>
-            </div>-->
-
-            <!-- <b-button-group class="col-sm" v-for="(area, index) in areas" :key="index">
-                    <b-button
-                        class="btn btn-secondary text-center"
-                        @click.prevent="areaIndex = index"
-                    >{{ area.name }}</b-button>
-                </b-button-group>
-            </div>-->
-
             <div class="row subareas">
                 <div v-for="(area, index) in areas" :key="index">
-                    <div>
+                    <div v-if="areaIndex == area.name">
                         <h2>{{ area.name}}</h2>
                         <p>
                             <strong>Description:</strong>
@@ -72,6 +35,7 @@
                             <p>{{ subarea.description }}</p>
                         </div>
                     </div>
+                    <div v-else></div>
                 </div>
             </div>
         </div>
@@ -236,7 +200,9 @@ export default {
     },
     methods: {
         changeSelectVal: function(val) {
-            this.selected = val;
+            this.areaIndex = val;
+            // type.isActive = !type.isActive;
+            // this.fundraising.selected = type.value;
         }
     }
 };
