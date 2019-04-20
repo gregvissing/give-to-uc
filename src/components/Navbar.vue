@@ -31,6 +31,9 @@
                             <router-link to="/areas-to-give" class="nav-link" exact>Areas to Support</router-link>
                         </li>
                         <li class="nav-item">
+                            <a href="#" class="nav-link donate">DONATE NOW</a>
+                        </li>
+                        <li class="nav-item">
                             <a href="#" class="nav-link" @click.prevent="showSearch = !showSearch">
                                 <font-awesome-icon icon="search"/>
                             </a>
@@ -72,6 +75,18 @@ nav {
     &.custom-bg-dark {
         background-color: $black !important;
     }
+    .dropdown-menu {
+        padding: 0;
+        border-radius: 0;
+        .dropdown-item {
+            padding: 0.5rem 1.5rem;
+            @include transition(all 0.4s ease);
+            &:hover {
+                background-color: $black;
+                color: $white;
+            }
+        }
+    }
     .navbar-brand {
         img {
             height: 62px !important;
@@ -87,12 +102,23 @@ nav {
                 padding: 1rem 0.75rem;
                 text-transform: uppercase;
                 @include transition(all 0.4s ease);
+
                 &:hover,
                 &.active {
-                    background-color: $white !important;
-                    color: $black !important;
+                    /* background-color: $white !important; */
+                    color: $red !important;
+                    border-bottom: 3px solid $red;
+                    box-sizing: border-box;
                     svg path {
                         fill: $black !important;
+                    }
+                }
+                &.donate {
+                    background-color: $red;
+                    &:hover {
+                        background-color: $white;
+                        border: none;
+                        color: $red !important;
                     }
                 }
             }

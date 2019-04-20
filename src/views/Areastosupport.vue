@@ -1,5 +1,18 @@
 <template>
     <div class="internal">
+        <div class="areas-submenu btn-group btn-group-toggle">
+            <label
+                class="btn btn-secondary"
+                :class="{ 'select': selected === area.name, '': selected !== area.name }"
+                v-for="(area, index) in areas"
+                :key="index"
+                :item="area.name"
+                @click="changeSelectVal(key)"
+            >
+                <input type="radio" :value="area.name" name="area-filter" v-model="selected">
+                {{ area.name }}
+            </label>
+        </div>
         <h1>Areas to Support</h1>
         <hr>
         <h3>Support the Causes Most Important to You</h3>
@@ -31,24 +44,29 @@
                     </b-tab>
                 </b-tabs>
             </div>-->
-            <div class="row">AreaIndex: {{ areaIndex }}</div>
-            <div class="row areas">
-                <!-- <div class="form-group">
+            <!-- <div class="row">AreaIndex: {{ areaIndex }}</div> -->
+            <!-- <div class="row areas"> -->
+            <!-- <div class="form-group">
                     <RadioGroup :areas="areas" :selected.sync="area" v-model="area"/>
-                </div>-->
+            </div>-->
 
-                <b-button-group class="col-sm" v-for="(area, index) in areas" :key="index">
+            <!-- <b-button-group class="col-sm" v-for="(area, index) in areas" :key="index">
                     <b-button
                         class="btn btn-secondary text-center"
                         @click.prevent="areaIndex = index"
                     >{{ area.name }}</b-button>
                 </b-button-group>
-            </div>
+            </div>-->
 
             <div class="row subareas">
                 <div v-for="(area, index) in areas" :key="index">
                     <div>
-                        <p>Description: {{ area.description }}</p>
+                        <h2>{{ area.name}}</h2>
+                        <p>
+                            <strong>Description:</strong>
+                            <br>
+                            {{ area.description }}
+                        </p>
                         <div v-for="(subarea, index) in area.subareas" :key="index">
                             <label>{{ subarea.name }}</label>
                             <p>{{ subarea.description }}</p>
@@ -65,9 +83,11 @@ export default {
     name: "areastosupport",
     data() {
         return {
+            selected: "",
             areaIndex: "",
             areas: [
                 {
+                    id: 0,
                     name: "Colleges and School",
                     description:
                         "Your support of individual colleges within the University of Cincinnati helps support scholarships, research and special programs throughout UC. Select a college below to learn more about that school's vision and read about funds that have been identified as priorities.",
@@ -113,6 +133,7 @@ export default {
                     ]
                 },
                 {
+                    id: 1,
                     name: "Scholarships",
                     description:
                         "Support scholarship programs to make an impact directly on the lives of students in need. Select a scholarship fund below to learn more about special scholarship initiatives and how you can support students today.",
@@ -150,6 +171,7 @@ export default {
                     ]
                 },
                 {
+                    id: 2,
                     name: "UC Health",
                     description:
                         "Support programs within UC Health that promote patient care, treatment and cutting-edge research. Select an area below to learn more about funding priorities and how you can make a difference in the areas you value most.",
@@ -166,6 +188,7 @@ export default {
                     ]
                 },
                 {
+                    id: 3,
                     name: "University-wide Initiatives",
                     description:
                         "Learn more about programs that make an impact across all areas of UC and UC Health. Select an area below to learn more about funding priorities and how you can make a difference in the areas you value most.",
@@ -204,12 +227,51 @@ export default {
                 }
             ]
         };
+    },
+
+    watch: {
+        selected: function(val) {
+            this.$emit("input", val);
+        }
+    },
+    methods: {
+        changeSelectVal: function(val) {
+            this.selected = val;
+        }
     }
 };
 </script>
 
 <style lang="scss" scoped>
 @import "@/assets/scss/styles.scss";
+
+#app-container {
+    padding-top: 0 !important;
+}
+
+.areas-submenu {
+    position: fixed;
+    top: 96px;
+    left: 0;
+    right: 0;
+    label {
+        background-color: $red;
+        padding: 0.5rem 0.75rem;
+        @include transition(all 0.4s ease);
+        &.select,
+        &:hover {
+            background-color: $white;
+            color: $black;
+        }
+    }
+}
+
+.subareas {
+    h2 {
+        margin-top: 1rem;
+        border-bottom: 3px solid $red;
+    }
+}
 
 .container {
     max-width: 100%;
@@ -222,37 +284,6 @@ export default {
             .btn {
                 padding: 0.5rem 0.75rem;
                 width: 100%;
-            }
-        }
-    }
-}
-
-.tabs {
-    background: rgba($white, 0.75);
-    a.nav-link {
-        color: $red;
-    }
-    .tablist {
-        .nav-item {
-            .nav-link {
-                color: $red !important;
-                &.active {
-                    color: $black !important;
-                }
-            }
-        }
-    }
-    .tab-content {
-        border: 1px solid $white;
-        > .tab-pane {
-            &.active {
-                padding: 1em;
-            }
-            &:focus {
-                outline: none;
-            }
-            h3 {
-                color: $red;
             }
         }
     }
