@@ -13,7 +13,7 @@
                             type="button"
                             data-toggle="collapse"
                             :data-target="'#collapse' + index"
-                            aria-expanded="true"
+                            aria-expanded="false"
                             :aria-controls="'collapse' + index"
                         >{{ way.name }}</button>
                     </h2>
@@ -78,7 +78,7 @@ export default {
 @import "@/assets/scss/styles.scss";
 
 .accordion {
-    margin: 1em 0;
+    margin: 2em 0;
     border: 3px solid $white;
     .card {
         background: $black;
@@ -92,9 +92,10 @@ export default {
                     color: $white;
                     text-align: left;
                     width: 100%;
-                    &:focus,
-                    &:hover {
-                        text-decoration: none;
+                    @include transition(all 0.4s ease);
+                    &:hover,
+                    &[aria-expanded="true"] {
+                        background: $red;
                     }
                 }
             }
@@ -106,10 +107,7 @@ export default {
         }
         .collapse {
             .card-body {
-                /* background: $white;
-                > p {
-                    color: $black !important;
-                } */
+                border-bottom: 1px solid $white;
             }
         }
     }

@@ -46,7 +46,7 @@ body {
     height: 100vh;
 }
 .hero {
-    padding: 4em;
+    padding: 4em 2em;
     background-color: rgba(255, 255, 255, 0.5);
     position: relative;
     h1 {

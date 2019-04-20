@@ -21,16 +21,29 @@ div#app-container {
     padding: 2rem;
     /* background-color: #1d2733; */
     overflow: auto;
-    background-image: url(https://foundation.uc.edu/image/annual-report/2018/letters/UC-Campus-Scenes0232.jpg);
+    background-image: url(https://www.alumni.uc.edu/image/home-full-width/MM-Geen-3.jpg);
+    // background-image: url(https://foundation.uc.edu/image/annual-report/2018/letters/UC-Campus-Scenes0232.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 p,
+span,
+a,
 h1,
 h2,
 h3 {
     color: $white;
+}
+
+a {
+    &:hover {
+        color: rgba($white, 0.8);
+    }
+}
+
+h4 {
+    color: $red;
 }
 
 a {
