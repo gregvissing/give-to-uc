@@ -15,7 +15,10 @@
                             :data-target="'#collapse' + index"
                             aria-expanded="false"
                             :aria-controls="'collapse' + index"
-                        >{{ way.name }}</button>
+                        >
+                            <font-awesome-icon icon="plus"/>
+                            {{ way.name }}
+                        </button>
                     </h2>
                 </div>
                 <div
@@ -93,9 +96,19 @@ export default {
                     text-align: left;
                     width: 100%;
                     @include transition(all 0.4s ease);
+                    svg {
+                        margin-right: 10px;
+                        transform: rotate(0deg);
+                        @include transition(all 0.4s ease);
+                    }
                     &:hover,
                     &[aria-expanded="true"] {
                         background: $red;
+                    }
+                    &[aria-expanded="true"] {
+                        svg {
+                            transform: rotate(-135deg);
+                        }
                     }
                 }
             }
@@ -112,4 +125,31 @@ export default {
         }
     }
 }
+
+/* Add Indicator fontawesome icon to the left */
+/* .accordion {
+    .card-header {
+        .btn-link {
+            &:before {
+                font-family: "Font Awesome";
+                content: "\f00d";
+                float: left;
+                color: white;
+                font-weight: lighter;
+                transform: rotate(0deg);
+                transition: all 0.2s ease-in;
+            }
+            &.collapsed::before {
+                color: #444;
+                transform: rotate(-135deg);
+                transition: all 0.2s ease-in;
+            }
+        }
+    }
+} */
+/* .accordion .panel-heading .accordion-toggle.collapsed::before {
+    color: #444;
+    transform: rotate(-135deg);
+    transition: all 0.2s ease-in;
+} */
 </style>

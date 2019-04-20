@@ -12,7 +12,8 @@ import {
 import {
   faSearch,
   faPhone,
-  faEnvelope
+  faEnvelope,
+  faPlus
 } from "@fortawesome/free-solid-svg-icons";
 import {
   FontAwesomeIcon
@@ -21,6 +22,7 @@ import {
 library.add(faSearch);
 library.add(faPhone);
 library.add(faEnvelope);
+library.add(faPlus);
 
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 
