@@ -124,7 +124,7 @@ nav {
                 text-transform: uppercase;
                 position: relative;
                 @include transition(all 0.4s ease);
-                &:hover,
+                &:not(.donate):hover,
                 &.active {
                     /* background-color: $white !important; */
                     color: $red !important;
@@ -150,6 +150,7 @@ nav {
                         background-color: $white;
                         border: none;
                         color: $red !important;
+                        border: none;
                     }
                 }
             }

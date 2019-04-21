@@ -106,9 +106,9 @@ export default {
 <style lang="scss" scoped>
 @import "@/assets/scss/styles.scss";
 
-#app-container {
-    padding-top: 0 !important;
-}
+/* #app-container {
+    padding-top: 2rem !important;
+} */
 
 .areas-submenu {
     position: fixed;

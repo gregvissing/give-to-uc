@@ -1,7 +1,5 @@
 <template>
     <div class="home">
-        <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
-        <!-- <HelloWorld msg="A gift to UC can make a world of difference."/> -->
         <div class="hero">
             <h2 class="text-center">Make Your Impact</h2>
             <h1 class="text-center">Your support of UC and UC Health changes lives.</h1>
@@ -40,11 +38,19 @@ body {
     margin: 0;
 }
 #app {
-    background-image: url(https://foundation.uc.edu/image/annual-report/2018/letters/UC-Campus-Scenes0232.jpg);
+    background-image: url(https://www.alumni.uc.edu/image/home-full-width/MM-Geen-3.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
 }
+
+/* .home {
+    background-image: url(https://www.alumni.uc.edu/image/home-full-width/MM-Geen-3.jpg);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
 .hero {
     padding: 4em 2em;
     background-color: rgba(255, 255, 255, 0.5);

@@ -18,13 +18,12 @@ div#app-container {
     left: 0;
     bottom: 46px;
     width: 100%;
-    padding: 2rem;
+    padding: 2.75rem 2rem;
     /* background-color: #1d2733; */
-    overflow: auto;
-    background-image: url(https://www.alumni.uc.edu/image/home-full-width/MM-Geen-3.jpg);
-    // background-image: url(https://foundation.uc.edu/image/annual-report/2018/letters/UC-Campus-Scenes0232.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    overflow: visible;
+    // background-image: url(https://www.alumni.uc.edu/image/home-full-width/MM-Geen-3.jpg);
+    // background-repeat: no-repeat;
+    // background-size: cover;
 }
 
 p,
@@ -38,7 +37,13 @@ h3 {
 
 a {
     &:hover {
+        text-decoration: none;
         color: rgba($white, 0.8);
+    }
+
+    &:focus,
+    &:active {
+        text-decoration: none;
     }
 }
 
@@ -50,6 +55,7 @@ a {
     border-radius: 0 !important;
 }
 
+a,
 p,
 button {
     font-family: 'Open Sans' !important;
@@ -59,21 +65,36 @@ h2 {
     font-family: 'Bree Serif';
 }
 
+// Button styles
+
 button {
 
     &:focus,
     &:hover {
-        text-decoration: none;
+        text-decoration: none !important;
     }
+}
+
+a:focus,
+.btn-primary:focus,
+.btn-primary.focus {
+    outline: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
 }
 
 .btn-success {
     background-color: #4fc08d !important;
+
+    &:hover {
+        background-color: #3da978;
+    }
 }
 
 .btn-success:hover {
     background-color: #3da978;
 }
+
 
 .modal-title,
 .modal-body p {

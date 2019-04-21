@@ -8,7 +8,6 @@ export let areas = [{
                 description: "",
                 about: "The College of Allied Health Sciences educates and prepares future health and other health science professionals to provide high-quality service in their respective fields. In conjunction with community-based partners, students achieve clinical skills and learn the values of critical thinking, good communication, teamwork, cultural competence and service learning. The college's faculty is committed to excellence in teaching, research, service and leadership.",
                 vision: "The College of Allied Health Sciences aspires to be a preeminent leader in healthcare profession and education, to nurture its students so they meet their fullest potential and allow them to become outstanding professionals and individuals. Together, the college of allied health sciences and its alumni will transform our healthcare community through proper clinical treatment, prevention, skill and knowledge.",
-
                 fundingOpportunities: [{
                     name: "College Scholarship & Program Funds For Ongoing Contributions",
                     funds: [{
