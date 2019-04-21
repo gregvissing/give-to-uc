@@ -22,6 +22,8 @@
 
         <div class="container">
             <div class="row subareas">
+                <modal v-show="showModal" :item="selectedItem" @close="deselect"></modal>
+
                 <div v-for="(area, index) in areas" :key="index">
                     <div v-if="areaIndex == area.name">
                         <h2>{{ area.name}}</h2>
@@ -30,181 +32,74 @@
                             <br>
                             {{ area.description }}
                         </p>
-                        <div v-for="(subarea, index) in area.subareas" :key="index">
-                            <label>{{ subarea.name }}</label>
-                            <p>{{ subarea.description }}</p>
-                        </div>
+
+                        <button
+                            id="show-modal"
+                            @click.prevent="selectItem(subarea)"
+                            v-for="(subarea, index) in area.subareas"
+                            :key="index"
+                        >{{ subarea.name }}</button>
                     </div>
-                    <div v-else></div>
                 </div>
             </div>
         </div>
     </div>
 </template>
 
+<script type="text/x-template" id="modal-template">
+<transition name="modal">
+    <div class="modal-mask">
+        <div class="modal-wrapper">
+            <div class="modal-container">
+                Test
+                <slot name="closebutton">default close button</slot>
+                <div class="modal-header">
+                    <slot name="header">default header</slot>
+                    <slot name="subHeader">default sub-header</slot>
+                </div>
+                <div class="modal-body">
+                    <slot name="body">default body</slot>
+                </div>
+            </div>
+        </div>
+    </div>
+</transition>;
+</script>
+
 <script>
+import { areas } from "../data";
+import modal from "@/components/Modal.vue";
+
 export default {
     name: "areastosupport",
+    components: {
+        modal
+    },
     data() {
         return {
+            areas: areas,
             selected: "",
             areaIndex: "",
-            areas: [
-                {
-                    id: 0,
-                    name: "Colleges and School",
-                    description:
-                        "Your support of individual colleges within the University of Cincinnati helps support scholarships, research and special programs throughout UC. Select a college below to learn more about that school's vision and read about funds that have been identified as priorities.",
-                    subareas: [
-                        {
-                            name: "College of Allied Health Sciences",
-                            description: ""
-                        },
-                        {
-                            name: "McMicken College of Arts & Sciences",
-                            description: ""
-                        },
-                        {
-                            name: "Carl H. Lindner College of Business",
-                            description: ""
-                        },
-                        { name: "UC Clermont College", description: "" },
-                        {
-                            name: "College-Conservatory of Music",
-                            description: ""
-                        },
-                        {
-                            name:
-                                "College of Design, Architecture, Art, and Planning"
-                        },
-                        {
-                            name:
-                                "College of Education, Criminal Justice and Human Services"
-                        },
-                        {
-                            name: "College of Engineering and Applied Science",
-                            description: ""
-                        },
-                        { name: "College of Law", description: "" },
-                        { name: "College of Medicine", description: "" },
-                        { name: "College of Nursing", description: "" },
-                        {
-                            name: "James L. Winkle College of Pharmacy",
-                            description: ""
-                        },
-                        { name: "UC Blue Ash College", description: "" },
-                        { name: "The Graduate School", description: "" }
-                    ]
-                },
-                {
-                    id: 1,
-                    name: "Scholarships",
-                    description:
-                        "Support scholarship programs to make an impact directly on the lives of students in need. Select a scholarship fund below to learn more about special scholarship initiatives and how you can support students today.",
-                    subareas: [
-                        { name: "UC Alumni Association", description: "" },
-                        { name: "Annual Giving", description: "" },
-                        { name: "UC Bearcats Pantry", description: "" },
-                        { name: "Diversity Initiatives", description: "" },
-                        { name: "Henry R. Winkler Center", description: "" },
-                        { name: "Gen-1 House", description: "" },
-                        {
-                            name: "Institute for Policy Research",
-                            description: ""
-                        },
-                        {
-                            name: "Osher Lifelong Learning Institute",
-                            description: ""
-                        },
-                        { name: "UC Parents Campaign", description: "" },
-                        { name: "Research", description: "" },
-                        {
-                            name: "A Salute to Service Program",
-                            description: ""
-                        },
-                        { name: "Science Programs", description: "" },
-                        { name: "Student Life", description: "" },
-                        {
-                            name: "UCATS - UC Athletics Team Support",
-                            description: ""
-                        },
-                        { name: "University Honors Program", description: "" },
-                        { name: "UC International", description: "" },
-                        { name: "UC Libraries", description: "" },
-                        { name: "Provost Programs", description: "" }
-                    ]
-                },
-                {
-                    id: 2,
-                    name: "UC Health",
-                    description:
-                        "Support programs within UC Health that promote patient care, treatment and cutting-edge research. Select an area below to learn more about funding priorities and how you can make a difference in the areas you value most.",
-                    subareas: [
-                        { name: "UC Cancer Institute", description: "" },
-                        {
-                            name: "UC Gardner Neuroscience Institute",
-                            description: ""
-                        },
-                        {
-                            name: "Heart, Lung & Vascular Institute",
-                            description: ""
-                        }
-                    ]
-                },
-                {
-                    id: 3,
-                    name: "University-wide Initiatives",
-                    description:
-                        "Learn more about programs that make an impact across all areas of UC and UC Health. Select an area below to learn more about funding priorities and how you can make a difference in the areas you value most.",
-                    subareas: [
-                        {
-                            name: "Cincinnatus Scholarship Program",
-                            description: ""
-                        },
-                        {
-                            name: "Darwin T. Turner Scholars Program",
-                            description: ""
-                        },
-                        {
-                            name: "Linda Bates Parker Scholarship",
-                            description: ""
-                        },
-                        { name: "UCAA Scholarships", description: "" },
-                        { name: "Athletic Scholarships", description: "" },
-                        {
-                            name: "Endowed Funds & Scholarships",
-                            description: ""
-                        },
-                        {
-                            name: "Lindner Honors-PLUS Scholarship Program",
-                            description: ""
-                        },
-                        {
-                            name: "Kolodzik Business Scholars Program",
-                            description: ""
-                        },
-                        {
-                            name: "Business Fellows Annual Scholarship Fund",
-                            description: ""
-                        }
-                    ]
-                }
-            ]
-        };
-    },
 
-    watch: {
-        selected: function(val) {
-            this.$emit("input", val);
-        }
+            selectedItem: undefined,
+            showModal: false
+        };
     },
     methods: {
         changeSelectVal: function(val) {
             this.areaIndex = val;
-            // type.isActive = !type.isActive;
-            // this.fundraising.selected = type.value;
+        },
+        selectItem(subarea) {
+            this.selectedItem = subarea;
+            console.log(this.selectedItem);
+            this.showModal = true;
+        },
+        deselect() {
+            this.selectedItem = undefined;
+            this.showModal = false;
         }
     }
+    // template: "#modal-template"
 };
 </script>
 
@@ -236,6 +131,29 @@ export default {
     h2 {
         margin-top: 1rem;
         border-bottom: 3px solid $red;
+    }
+    label {
+        color: $white;
+    }
+    .subarea,
+    button {
+        padding: 5px 15px;
+        border: 1px solid $white;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        display: inline-block;
+        @include transition(all 0.4s ease);
+        label {
+            margin: 0;
+            display: block;
+            @include transition(all 0.4s ease);
+        }
+        &:hover {
+            background: $white;
+            label {
+                color: $black;
+            }
+        }
     }
 }
 

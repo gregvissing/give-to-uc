@@ -6,18 +6,14 @@ import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap";
 import "@/assets/css/style.css";
 import BootstrapVue from "bootstrap-vue";
-import {
-  library
-} from "@fortawesome/fontawesome-svg-core";
+import { library } from "@fortawesome/fontawesome-svg-core";
 import {
   faSearch,
   faPhone,
   faEnvelope,
   faPlus
 } from "@fortawesome/free-solid-svg-icons";
-import {
-  FontAwesomeIcon
-} from "@fortawesome/vue-fontawesome";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 library.add(faSearch);
 library.add(faPhone);

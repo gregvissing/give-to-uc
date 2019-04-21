@@ -114,18 +114,21 @@ nav {
     }
     .navbar-nav {
         .nav-item {
-            margin: 0;
+            margin: 0 10px 0 0;
+            &:last-child {
+                margin: 0;
+            }
             .nav-link {
                 color: $white;
                 padding: 1rem 0.75rem;
                 text-transform: uppercase;
                 position: relative;
                 @include transition(all 0.4s ease);
-
                 &:hover,
                 &.active {
                     /* background-color: $white !important; */
                     color: $red !important;
+                    background: rgba($white, 0.1);
                     box-sizing: border-box;
                     &:before {
                         content: "";
