@@ -39,7 +39,10 @@
                             </a>
                         </li>
                     </ul>
-                    <form v-show="showSearch == true" class="form-inline mt-2 mt-md-0">
+                    <form
+                        v-show="showSearch == true"
+                        class="form-inline mt-2 mt-md-0 search-container"
+                    >
                         <transition name="fade">
                             <input
                                 class="form-control mr-sm-2"
@@ -171,10 +174,20 @@ nav {
     .navigation.reduced .nav-container {
         height: 60px;
     } */
+
+    .search-container {
+        position: absolute;
+        right: 50px;
+        input {
+            border: 5px solid #666 !important;
+            padding: 1.5rem;
+            width: 750px;
+        }
+    }
 }
 #app .fade-enter-active,
 #app .fade-leave-active {
-    transition: opacity 0.3s;
+    transition: opacity 0.5s;
 }
 #app .fade-enter,
 #app .fade-leave-to {
