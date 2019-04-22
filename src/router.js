@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
@@ -31,7 +32,7 @@ export default new Router({
 			component: Areastosupport
 		}
 	],
-	scrollBehavior(to, from, savedPosition) {
+	scrollBehavior() {
 		return {
 			x: 0,
 			y: 0
