@@ -60,6 +60,7 @@ input {
     background-color: rgba(0, 0, 0, 0.75);
     text-align: left;
     padding: 1em;
+    margin-bottom: 50px;
     hr {
         border-top: 5px solid;
         border-color: $red;

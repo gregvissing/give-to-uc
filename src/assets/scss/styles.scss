@@ -16,17 +16,13 @@ div#app-container {
     position: relative; // fixed;
     top: 96px;
     width: 100%;
-    padding: 2.75rem 0rem;
+    padding: 2.75rem 2rem;
     /* background-color: #1d2733; */
     overflow: visible;
 
     // background-image: url(https://www.alumni.uc.edu/image/home-full-width/MM-Geen-3.jpg);
     // background-repeat: no-repeat;
     // background-size: cover;
-    >div {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
 }
 
 p,

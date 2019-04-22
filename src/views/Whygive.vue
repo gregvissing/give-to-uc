@@ -7,6 +7,37 @@
         <p>Phasellus eu est cursus, accumsan justo ac, lacinia nunc. Integer enim felis, rutrum vitae facilisis eget, dignissim non ex. Morbi imperdiet vestibulum lorem, vel vestibulum dui blandit vulputate. Phasellus urna arcu, sodales in justo vel, elementum pulvinar turpis. Ut in quam enim. Vestibulum non tristique nunc, vel bibendum urna. Duis mollis maximus massa.</p>
 
         <p>Ut auctor rhoncus tortor, sed volutpat diam fermentum quis. Morbi sodales dapibus gravida. Pellentesque facilisis ligula sed ante pulvinar, ut lacinia nunc mollis. Aenean eget porttitor ante. Nam sollicitudin interdum tortor in porttitor. Aenean tincidunt enim id massa suscipit iaculis. Fusce eget quam lacus. Donec sit amet elit ut enim dapibus finibus in non nisl. In consequat eros non nibh sagittis euismod. Aliquam ac rutrum tortor. Nullam faucibus tempor ante non sollicitudin. Donec posuere, arcu eget eleifend egestas, velit tortor sollicitudin orci, in egestas lorem risus ut arcu. Vivamus vitae ante orci.</p>
+
+        <hr>
+
+        <div class="container">
+            <!-- Example row of columns -->
+            <div class="row">
+                <div class="col-md-4">
+                    <h2>STORIES</h2>
+                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+                    <p>
+                        <a class="btn btn-secondary" href="#" role="button">View details »</a>
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h2>PHOTOS AND VIDEOS</h2>
+                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+                    <p>
+                        <a class="btn btn-secondary" href="#" role="button">View details »</a>
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h2>SHARE YOUR STORY</h2>
+                    <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+                    <p>
+                        <a class="btn btn-secondary" href="#" role="button">View details »</a>
+                    </p>
+                </div>
+            </div>
+
+            <hr>
+        </div>
     </div>
 </template>
 
