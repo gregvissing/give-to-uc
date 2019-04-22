@@ -15,15 +15,18 @@ $white: #ffffff;
 div#app-container {
     position: relative; // fixed;
     top: 96px;
-    left: 0;
-    bottom: 46px;
     width: 100%;
-    padding: 2.75rem 2rem;
+    padding: 2.75rem 0rem;
     /* background-color: #1d2733; */
     overflow: visible;
+
     // background-image: url(https://www.alumni.uc.edu/image/home-full-width/MM-Geen-3.jpg);
     // background-repeat: no-repeat;
     // background-size: cover;
+    >div {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
 }
 
 p,
@@ -57,6 +60,7 @@ a {
 
 a,
 p,
+span,
 button {
     font-family: 'Open Sans' !important;
 }
