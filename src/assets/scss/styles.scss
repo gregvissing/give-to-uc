@@ -74,6 +74,10 @@ h2,
 // Button styles
 
 button {
+    &.btn-secondary {
+        background-color: $black;
+        color: $white;
+    }
 
     &:focus,
     &:hover {

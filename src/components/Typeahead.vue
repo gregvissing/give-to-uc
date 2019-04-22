@@ -158,7 +158,8 @@ export default {
     color: #000;
 }
 #app .Results {
-    margin: 0;
+    width: 90%;
+    margin: 0 auto;
     padding: 0;
     text-align: left;
     position: relative;

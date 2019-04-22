@@ -1,20 +1,26 @@
 <template>
     <div class="home">
-        <!-- <img src="https://www.alumni.uc.edu/image/home-full-width/MM-Geen-3.jpg"> -->
         <div class="hero">
             <h2 class="text-center">Make Your Impact</h2>
             <h1 class="text-center">Your support of UC and UC Health changes lives.</h1>
             <button
                 id="show-modal"
-                class="btn btn-primary"
+                class="btn btn-primary mr-4"
                 @click.prevent="showModal = true"
             >DONATE NOW</button>
 
+            <button
+                id="show-modal"
+                class="btn btn-secondary"
+                @click.prevent="showSearchModal = true"
+            >SEARCH FUNDS</button>
+
             <FormModal v-show="showModal" @close="deselect"></FormModal>
+            <SearchModal v-show="showSearchModal" @close="deselectSearch"></SearchModal>
             <!-- <button class="btn btn-primary">DONATE NOW</button> -->
         </div>
 
-        <div class="Wrap text-center">
+        <!-- <div class="Wrap text-center">
             <p
                 class="text-center search-text"
             >Use the search box to find the fund you want to Impact!</p>
@@ -23,7 +29,7 @@
                 filter-key="titledesc"
                 :start-at="2"
             ></Typeahead>
-        </div>
+        </div>-->
 
         <div class="Wrap featuredFund">
             <p class="text-center search-text">Featured Funds</p>
@@ -113,16 +119,19 @@
 // @ is an alias to /src
 import Typeahead from "@/components/Typeahead.vue";
 import FormModal from "@/components/FormModal.vue";
+import SearchModal from "@/components/SearchModal.vue";
 
 export default {
     name: "home",
     components: {
         Typeahead,
-        FormModal
+        FormModal,
+        SearchModal
     },
     data() {
         return {
-            showModal: false
+            showModal: false,
+            showSearchModal: false
         };
     },
     methods: {
@@ -131,9 +140,16 @@ export default {
             // console.log(this.selectedItem);
             this.showModal = true;
         },
+        selectSearch() {
+            // this.selectedItem = subarea;
+            // console.log(this.selectedItem);
+            this.showSearchModal = true;
+        },
         deselect() {
-            // this.selectedItem = undefined;
             this.showModal = false;
+        },
+        deselectSearch() {
+            this.showSearchModal = false;
         }
     }
 };
