@@ -3,7 +3,7 @@
         <div class="hero">
             <h2 class="text-center">Make Your Impact</h2>
             <h1 class="text-center">Your support of UC and UC Health changes lives.</h1>
-            <button class="btn btn-primary">GIVE NOW</button>
+            <button class="btn btn-primary">DONATE NOW</button>
         </div>
 
         <div class="Wrap text-center">
@@ -38,10 +38,23 @@ body {
     margin: 0;
 }
 #app {
-    background-image: url(https://www.alumni.uc.edu/image/home-full-width/MM-Geen-3.jpg);
+    /* background-image: url(https://www.alumni.uc.edu/image/home-full-width/MM-Geen-3.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    height: 100vh; */
+    &:before {
+        content: " ";
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-image: url(https://www.alumni.uc.edu/image/home-full-width/MM-Geen-3.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100vh;
+    }
 }
 
 /* .home {

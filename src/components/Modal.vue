@@ -129,6 +129,7 @@ export default {
                 margin: 20px 0;
                 padding: 10px 20px;
                 h3 {
+                    margin: 0 !important;
                     font-weight: bold;
                     color: $black;
                 }
