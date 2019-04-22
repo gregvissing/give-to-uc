@@ -13,7 +13,7 @@
                 {{ area.name }}
             </label>
         </div>
-        <h1>Areas to Support</h1>
+        <h1 class="page-title">Areas to Support</h1>
         <hr>
         <h3>Support the Causes Most Important to You</h3>
 

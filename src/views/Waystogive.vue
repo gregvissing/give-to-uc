@@ -1,6 +1,6 @@
 <template>
     <div class="internal">
-        <h1>Ways To Give</h1>
+        <h1 class="page-title">Ways To Give</h1>
         <hr>
         <p>Whether you want to support next-generation cancer research, international learning opportunities, UC Athletics or everything in between, we want to make it easy for you to make a difference at UC and UC Health. There are a variety of ways you give back, and we are excited to work with you in building toward the future. Through Matching Gifts, Planned Giving, and other giving options you can make sure that your gift has the greatest possible impact on the UC and UC Health.</p>
 

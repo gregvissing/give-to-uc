@@ -1,6 +1,6 @@
 <template>
     <div class="internal">
-        <h1>Why Give</h1>
+        <h1 class="page-title">Why Give</h1>
         <hr>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo condimentum neque, vitae mollis erat auctor sed. Duis pellentesque auctor orci in tincidunt. Suspendisse sagittis ultricies fringilla. Duis finibus risus ut iaculis ultricies. In ultrices metus nec vulputate ornare. Maecenas maximus suscipit tempor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis eget quam et nunc feugiat interdum ac id arcu. Ut ligula leo, tincidunt eget lobortis at, dapibus et enim. Sed semper a massa nec tristique. Nam at pulvinar nulla. Sed gravida et leo et facilisis.</p>
 
@@ -14,21 +14,21 @@
             <!-- Example row of columns -->
             <div class="row">
                 <div class="col-md-4">
-                    <h2>STORIES</h2>
+                    <h2>Stories</h2>
                     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
                     <p>
                         <a class="btn btn-secondary" href="#" role="button">View details »</a>
                     </p>
                 </div>
                 <div class="col-md-4">
-                    <h2>PHOTOS AND VIDEOS</h2>
+                    <h2>Photos and Videos</h2>
                     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
                     <p>
                         <a class="btn btn-secondary" href="#" role="button">View details »</a>
                     </p>
                 </div>
                 <div class="col-md-4">
-                    <h2>SHARE YOUR STORY</h2>
+                    <h2>Share Your Story</h2>
                     <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
                     <p>
                         <a class="btn btn-secondary" href="#" role="button">View details »</a>
