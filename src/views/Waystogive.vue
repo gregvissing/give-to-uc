@@ -2,9 +2,10 @@
     <div class="internal">
         <h1>Ways To Give</h1>
         <hr>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at felis eget sapien vestibulum pellentesque nec nec libero. Cras sed sapien eu ipsum egestas sodales sed in lacus. Etiam commodo tellus a arcu tristique, ut tempus turpis ornare. Quisque ac enim libero. Nullam imperdiet posuere consequat. Vivamus interdum tincidunt aliquam. Maecenas a arcu sed est ullamcorper posuere a et erat. Curabitur ut lectus arcu. Vestibulum elementum sodales finibus. Cras convallis justo purus, sit amet pellentesque odio pulvinar in. Maecenas eleifend nunc nec gravida posuere. Ut auctor turpis turpis. Nulla lacus ex, blandit quis feugiat in, ullamcorper sit amet nibh. Donec maximus elit sagittis enim eleifend laoreet.</p>
-        <p>Morbi vehicula blandit risus et suscipit. Integer a orci vel sem luctus molestie. Cras eu varius leo. Nullam risus nibh, interdum ac ornare lacinia, consequat a lacus. Mauris est justo, vehicula id dui vel, eleifend facilisis urna. Fusce blandit, dolor in pellentesque consectetur, urna mi dictum arcu, eu dapibus tellus magna eget velit. Vestibulum et tincidunt dolor.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In molestie convallis magna porttitor aliquam. Proin aliquet justo malesuada mi efficitur, ut tempor ipsum suscipit. Quisque quis consequat nibh, ut maximus purus. Nulla metus elit, sagittis suscipit enim in, fringilla viverra lacus. Vivamus mollis felis mauris, id fringilla purus dapibus quis. Nam eget lobortis lectus. Nulla urna sapien, gravida quis massa at, viverra accumsan velit. Nunc bibendum sapien a felis rutrum consectetur id nec tellus.</p>
+        <p>Whether you want to support next-generation cancer research, international learning opportunities, UC Athletics or everything in between, we want to make it easy for you to make a difference at UC and UC Health. There are a variety of ways you give back, and we are excited to work with you in building toward the future. Through Matching Gifts, Planned Giving, and other giving options you can make sure that your gift has the greatest possible impact on the UC and UC Health.</p>
+
+        <p>Explore all of our giving options to learn more about how to make your gift have the greatest impact on campus and throughout our community.</p>
+
         <div class="accordion" id="accordionExample">
             <div class="card" v-for="(way, index) in options" :key="index">
                 <div class="card-header" :id="'heading' + index">
