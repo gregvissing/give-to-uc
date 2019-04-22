@@ -35,8 +35,6 @@
                     </p>
                 </div>
             </div>
-
-            <hr>
         </div>
     </div>
 </template>
