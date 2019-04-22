@@ -78,8 +78,8 @@ export default {
     data() {
         return {
             areas: areas,
-            selected: "",
-            areaIndex: "",
+            selected: "Colleges and School",
+            areaIndex: "Colleges and School",
 
             selectedItem: undefined,
             showModal: false

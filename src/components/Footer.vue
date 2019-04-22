@@ -26,7 +26,7 @@
                             <span class="fab fa-facebook-square">Facebook</span>
                         </p>
                         <p>
-                            <span class="fab fa-linkedin">Linked</span>
+                            <span class="fab fa-linkedin">LinkedIn</span>
                         </p>
                         <p>
                             <span class="fab fa-twitter-square">Twitter</span>
