@@ -18,9 +18,6 @@
             <p
                 class="text-center search-text"
             >Use the search box to find the fund you want to Impact!</p>
-            <span
-                class="placeholder"
-            >(Future functionality: look up/select fund, taking user to donation page.)</span>
             <Typeahead
                 placeholder="What Fund you are looking for..."
                 filter-key="titledesc"
