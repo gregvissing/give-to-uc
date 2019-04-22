@@ -3,13 +3,23 @@
         <div class="hero">
             <h2 class="text-center">Make Your Impact</h2>
             <h1 class="text-center">Your support of UC and UC Health changes lives.</h1>
-            <button class="btn btn-primary">DONATE NOW</button>
+            <button
+                id="show-modal"
+                class="btn btn-primary"
+                @click.prevent="showModal = true"
+            >DONATE NOW</button>
+
+            <FormModal v-show="showModal" @close="deselect"></FormModal>
+            <!-- <button class="btn btn-primary">DONATE NOW</button> -->
         </div>
 
         <div class="Wrap text-center">
             <p
                 class="text-center search-text"
             >Use the search box to find the fund you want to Impact!</p>
+            <span
+                class="placeholder"
+            >(Functionality: look up/select fund, taking user to donation page.</span>
             <Typeahead
                 placeholder="What Fund you are looking for..."
                 filter-key="titledesc"
@@ -19,14 +29,52 @@
     </div>
 </template>
 
+<script type="text/x-template" id="modal-form-template">
+<transition name="modal">
+    <div class="modal-mask">
+        <div class="modal-wrapper">
+            <div class="modal-container">
+                Test
+                <slot name="closebutton">default close button</slot>
+                <div class="modal-header">
+                    <slot name="header">default header</slot>
+                    <slot name="subHeader">default sub-header</slot>
+                </div>
+                <div class="modal-body">
+                    <slot name="body">default body</slot>
+                </div>
+            </div>
+        </div>
+    </div>
+</transition>;
+</script>
+
 <script>
 // @ is an alias to /src
 import Typeahead from "@/components/Typeahead.vue";
+import FormModal from "@/components/FormModal.vue";
 
 export default {
     name: "home",
     components: {
-        Typeahead
+        Typeahead,
+        FormModal
+    },
+    data() {
+        return {
+            showModal: false
+        };
+    },
+    methods: {
+        selectItem(subarea) {
+            // this.selectedItem = subarea;
+            // console.log(this.selectedItem);
+            this.showModal = true;
+        },
+        deselect() {
+            // this.selectedItem = undefined;
+            this.showModal = false;
+        }
     }
 };
 </script>
@@ -66,7 +114,7 @@ body {
 
 .hero {
     padding: 4em 2em;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.6);
     position: relative;
     h1 {
         color: $black !important;

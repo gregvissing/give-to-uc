@@ -144,7 +144,14 @@ nav {
                         background: $red;
                     }
                     svg path {
-                        fill: $black !important;
+                        fill: $red !important;
+                    }
+                }
+                &:last-child {
+                    &:hover {
+                        &:before {
+                            display: none;
+                        }
                     }
                 }
                 &.donate {
