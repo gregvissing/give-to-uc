@@ -58,16 +58,20 @@
                         </p>
                     </div>
                 </div>
-                <div class="row copyright">
-                    <div class="col-md">
-                        <p
-                            class="text-center"
-                        >Copyright Information | &copy; 2019 University of Cincinnati Foundation</p>
-                    </div>
-                    <div class="col-md">
-                        <p class="text-center">
-                            <a href="https://www.alumni.uc.edu/privacy">privacy policy</a>
-                        </p>
+                <div class="copyright">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm">
+                                <p
+                                    class="text-left"
+                                >Copyright Information | &copy; 2019 University of Cincinnati Foundation</p>
+                            </div>
+                            <div class="col-sm">
+                                <p class="text-right">
+                                    <a href="https://www.alumni.uc.edu/privacy">privacy policy</a>
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
