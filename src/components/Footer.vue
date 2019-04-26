@@ -60,7 +60,14 @@
                 </div>
                 <div class="row copyright">
                     <div class="col-md">
-                        <p>Copyright Information | &copy; 2019 University of Cincinnati Foundation</p>
+                        <p
+                            class="text-center"
+                        >Copyright Information | &copy; 2019 University of Cincinnati Foundation</p>
+                    </div>
+                    <div class="col-md">
+                        <p class="text-center">
+                            <a href="https://www.alumni.uc.edu/privacy">privacy policy</a>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -118,12 +125,15 @@ footer {
                 padding: 15px 0;
                 margin: 0;
                 color: $white;
-                background: $black;
+                background: #212121;
                 position: absolute;
                 bottom: 20px;
                 left: 0;
                 right: 0;
                 z-index: 20;
+                a {
+                    color: $red;
+                }
             }
         }
         .footer-logo {

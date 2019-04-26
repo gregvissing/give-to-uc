@@ -7,13 +7,13 @@
                 id="show-modal"
                 class="btn btn-primary mr-4"
                 @click.prevent="showModal = true"
-            >DONATE NOW</button>
+            >Donate Now</button>
 
             <button
                 id="show-modal"
                 class="btn btn-secondary"
                 @click.prevent="showSearchModal = true"
-            >SEARCH FUNDS</button>
+            >Search Funds</button>
 
             <FormModal v-show="showModal" @close="deselect"></FormModal>
             <SearchModal v-show="showSearchModal" @close="deselectSearch"></SearchModal>

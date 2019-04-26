@@ -46,7 +46,7 @@ input {
 
 .btn {
     border-radius: 0 !important;
-    border-color: $black !important;
+    border-color: transparent !important;
     &.btn-primary {
         background-color: $red !important;
     }

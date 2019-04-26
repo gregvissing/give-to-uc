@@ -5,7 +5,7 @@
                 <router-link to="/" class="navbar-brand">
                     <img
                         alt="University of Cincinnati Foundation"
-                        src="https://foundation.uc.edu/image/css/logo-ucFoundation.png"
+                        src="https://foundation.uc.edu/file/projects/give-to-uc/images/logo-ucFoundation-white.png"
                     >
                 </router-link>
                 <button
@@ -93,8 +93,10 @@ export default {
 
 nav {
     height: 6rem;
+    -webkit-box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.5);
     &.custom-bg-dark {
-        background-color: $black !important;
+        background-color: $red !important;
     }
     .dropdown-menu {
         padding: 0;
