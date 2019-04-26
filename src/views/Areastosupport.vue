@@ -1,5 +1,5 @@
 <template>
-    <div class="internal">
+    <div class="internal container">
         <div class="areas-submenu btn-group btn-group-toggle">
             <label
                 class="btn btn-secondary"
@@ -81,7 +81,7 @@ export default {
             selected: "Colleges and School",
             areaIndex: "Colleges and School",
 
-            selectedItem: undefined,
+            selectedItem: "Colleges and School",
             showModal: false
         };
     },
@@ -116,7 +116,7 @@ export default {
     left: 0;
     right: 0;
     label {
-        background-color: $red;
+        background-color: $black;
         padding: 0.5rem 0.75rem;
         @include transition(all 0.4s ease);
         &.select,
@@ -157,9 +157,9 @@ export default {
     }
 }
 
-.container {
+/* .container {
     max-width: 100%;
-}
+} */
 .areas {
     &.row {
         padding: 2em;

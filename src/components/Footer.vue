@@ -16,9 +16,8 @@
                     <div class="col-sm text-left">
                         <h4>Contact</h4>
                         <p>The University of Cincinnati Foundation</p>
-                        <p>PO Box 19970 | Cincinnati, OH 45219</p>
-                        <p>513-556-6781 | 888-556-8889</p>
-                        <p>513-556-4300 (fax) | ucfoundation@uc.edu</p>
+                        <p>PO Box 19970</p>
+                        <p>Cincinnati, OH 45219</p>
                     </div>
                     <div class="col-sm text-left">
                         <h4>Connect</h4>
@@ -41,20 +40,40 @@
                     <div class="col-sm text-left">
                         <h4>Questions</h4>
                         <p>
+                            Phone:
                             <font-awesome-icon icon="phone"/>
                             <a
                                 data-v-236132e6
-                                href="tel:513-558-6903"
+                                href="tel:513-556-6781"
                                 aria-hidden="true"
-                            >513-558-6903</a>
+                            >513-556-6781</a>
                         </p>
                         <p>
+                            Phone:
+                            <font-awesome-icon icon="phone"/>
+                            <a
+                                data-v-236132e6
+                                href="tel:888-556-8889"
+                                aria-hidden="true"
+                            >888-556-8889</a>
+                        </p>
+                        <p>
+                            Email:
                             <font-awesome-icon icon="envelope"/>
                             <a
                                 data-v-236132e6
-                                href="mailto:ucgnistaff@uc.edu"
+                                href="mailto:ucfoundation@uc.edu"
                                 aria-hidden="true"
-                            >uc@uc.edu</a>
+                            >ucfoundation@uc.edu</a>
+                        </p>
+                        <p>
+                            Fax:
+                            <font-awesome-icon icon="fax"/>
+                            <a
+                                data-v-236132e6
+                                href="tel:513-556-4300"
+                                aria-hidden="true"
+                            >513-556-4300</a>
                         </p>
                     </div>
                 </div>

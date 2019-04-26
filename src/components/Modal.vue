@@ -76,8 +76,7 @@ export default {
     // props: ["item"],
     props: {
         item: {
-            type: Object,
-            requred: true
+            type: String
         }
     },
     methods: {

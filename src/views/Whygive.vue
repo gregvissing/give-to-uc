@@ -1,5 +1,5 @@
 <template>
-    <div class="internal">
+    <div class="internal container">
         <h1 class="page-title">Why Give</h1>
         <hr>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo condimentum neque, vitae mollis erat auctor sed. Duis pellentesque auctor orci in tincidunt. Suspendisse sagittis ultricies fringilla. Duis finibus risus ut iaculis ultricies. In ultrices metus nec vulputate ornare. Maecenas maximus suscipit tempor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis eget quam et nunc feugiat interdum ac id arcu. Ut ligula leo, tincidunt eget lobortis at, dapibus et enim. Sed semper a massa nec tristique. Nam at pulvinar nulla. Sed gravida et leo et facilisis.</p>

@@ -135,7 +135,7 @@ nav {
                     color: $black !important;
                     /* background: rgba($white, 0.1); */
                     box-sizing: border-box;
-                    &:before {
+                    /* &:before {
                         content: " ";
                         position: absolute;
                         left: 0;
@@ -144,7 +144,7 @@ nav {
                         height: 3px;
                         width: 100%;
                         background: $black;
-                    }
+                    } */
                     svg path {
                         fill: $black !important;
                     }
