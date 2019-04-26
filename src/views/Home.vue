@@ -212,12 +212,17 @@ body {
         font-size: 1.25em;
         padding: 10px 0;
         margin: 0;
-        background: $red;
+        background: $black;
     }
     > div {
         padding: 25px 0;
     }
     &.featuredFund {
+        .card {
+            .card-img-top {
+                border-radius: 0;
+            }
+        }
         .card-body {
             p {
                 color: #666;
