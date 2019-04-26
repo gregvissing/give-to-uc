@@ -2,7 +2,7 @@
     <footer id="custom-footer">
         <div class="sub-footer">
             <div class="container">
-                <div class="row logo">
+                <!-- <div class="row logo">
                     <div class="col-sm text-center">
                         <router-link to="/" class="footer-logo">
                             <img
@@ -11,17 +11,17 @@
                             >
                         </router-link>
                     </div>
-                </div>
+                </div>-->
                 <div class="row info">
                     <div class="col-sm text-left">
-                        <h4>CONTACT</h4>
+                        <h4>Contact</h4>
                         <p>The University of Cincinnati Foundation</p>
                         <p>PO Box 19970 | Cincinnati, OH 45219</p>
                         <p>513-556-6781 | 888-556-8889</p>
                         <p>513-556-4300 (fax) | ucfoundation@uc.edu</p>
                     </div>
                     <div class="col-sm text-left">
-                        <h4>CONNECT</h4>
+                        <h4>Connect</h4>
                         <p>
                             <span class="fab fa-facebook-square">Facebook</span>
                         </p>
@@ -31,9 +31,6 @@
                         <p>
                             <span class="fab fa-twitter-square">Twitter</span>
                         </p>
-                    </div>
-                    <div class="col-sm text-left">
-                        <h4>LINKS</h4>
                         <p>
                             <a href="https://foundation.uc.edu">UC Foundation</a>
                         </p>
@@ -41,21 +38,29 @@
                             <a href="https://alumni.uc.edu">UC Alumni Association</a>
                         </p>
                     </div>
+                    <div class="col-sm text-left">
+                        <h4>Questions</h4>
+                        <p>
+                            <font-awesome-icon icon="phone"/>
+                            <a
+                                data-v-236132e6
+                                href="tel:513-558-6903"
+                                aria-hidden="true"
+                            >513-558-6903</a>
+                        </p>
+                        <p>
+                            <font-awesome-icon icon="envelope"/>
+                            <a
+                                data-v-236132e6
+                                href="mailto:ucgnistaff@uc.edu"
+                                aria-hidden="true"
+                            >uc@uc.edu</a>
+                        </p>
+                    </div>
                 </div>
                 <div class="row copyright">
-                    <div
-                        class="col-md"
-                    >Copyright Information | &copy; 2019 University of Cincinnati Foundation</div>
                     <div class="col-md">
-                        Questions or need help?
-                        <font-awesome-icon icon="phone"/>
-                        <a data-v-236132e6 href="tel:513-558-6903" aria-hidden="true">513-558-6903</a>
-                        <font-awesome-icon icon="envelope"/>
-                        <a
-                            data-v-236132e6
-                            href="mailto:ucgnistaff@uc.edu"
-                            aria-hidden="true"
-                        >uc@uc.edu</a>
+                        <p>Copyright Information | &copy; 2019 University of Cincinnati Foundation</p>
                     </div>
                 </div>
             </div>
@@ -67,11 +72,10 @@
 @import "@/assets/scss/styles.scss";
 
 footer {
-    border-top: 5px solid $red;
+    /* border-top: 5px solid $red; */
     margin-top: 50px;
     position: relative;
     &#custom-footer {
-        font-size: 1rem;
         position: relative;
         bottom: 0;
         width: 100%;
@@ -87,7 +91,7 @@ footer {
             position: relative;
             p {
                 margin-bottom: 0;
-                font-size: 1em;
+                font-size: 0.9em;
             }
             a {
                 text-decoration: underline;
