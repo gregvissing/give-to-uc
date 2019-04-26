@@ -132,21 +132,21 @@ nav {
                 &:not(.donate):hover,
                 &.active {
                     /* background-color: $white !important; */
-                    color: $red !important;
-                    background: rgba($white, 0.1);
+                    color: $black !important;
+                    /* background: rgba($white, 0.1); */
                     box-sizing: border-box;
                     &:before {
-                        content: "";
+                        content: " ";
                         position: absolute;
                         left: 0;
                         right: 0;
                         bottom: 0;
                         height: 3px;
                         width: 100%;
-                        background: $red;
+                        background: $black;
                     }
                     svg path {
-                        fill: $red !important;
+                        fill: $black !important;
                     }
                 }
                 &:last-child {
@@ -157,7 +157,7 @@ nav {
                     }
                 }
                 &.donate {
-                    background-color: $red;
+                    background-color: $black;
                     &:hover {
                         background-color: $white;
                         border: none;

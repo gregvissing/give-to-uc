@@ -199,7 +199,7 @@ body {
         color: $red !important;
     }
     button {
-        font-size: 1.5em;
+        font-size: 1.25em;
     }
 }
 .Wrap {
